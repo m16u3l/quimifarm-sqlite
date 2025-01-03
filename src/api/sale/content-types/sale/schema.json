@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales",
+  "info": {
+    "singularName": "sale",
+    "pluralName": "sales",
+    "displayName": "Sale"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product_sold": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "sold"
+    },
+    "total_sold": {
+      "type": "biginteger"
+    },
+    "cant_sold": {
+      "type": "integer"
+    }
+  }
+}
